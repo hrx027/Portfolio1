@@ -1,18 +1,13 @@
-import { useState, useRef, useMemo } from "react"
-import { motion as Motion, useMotionValue, useSpring, useTransform } from "framer-motion"
-import { ClipboardList, Heart } from "lucide-react"
+import { useRef, useMemo } from "react"
+import { motion as Motion, useMotionValue, useTransform } from "framer-motion"
+import { ClipboardList } from "lucide-react"
 import resume from "../assets/HrithikRaj_2K22_CO_216.pdf"
 export default function ResumeCard() {
-  const [isHovering, setIsHovering] = useState(false)
   const containerRef = useRef(null)
 
   // Motion values
   const mouseX = useMotionValue(0)
   const mouseY = useMotionValue(0)
-
-  const springConfig = { damping: 25, stiffness: 300 }
-  const heartX = useSpring(mouseX, springConfig)
-  const heartY = useSpring(mouseY, springConfig)
 
   const handleMouseMove = (e) => {
     if (!containerRef.current) return
@@ -35,9 +30,7 @@ export default function ResumeCard() {
       <div
         ref={containerRef}
         onMouseMove={handleMouseMove}
-        onMouseEnter={() => setIsHovering(true)}
-        onMouseLeave={() => setIsHovering(false)}
-        className="relative h-48 w-full overflow-hidden rounded-2xl bg-zinc-950 cursor-none group flex items-center justify-center"
+        className="relative h-48 w-full overflow-hidden rounded-2xl bg-zinc-950 group flex items-center justify-center"
       >
         {/* Glow */}
         <Motion.div
@@ -64,20 +57,6 @@ export default function ResumeCard() {
           <p className="text-sm text-zinc-400 mt-1">(Click to download)</p>
         </div>
         </a>
-
-        {/* Heart cursor */}
-        <Motion.div
-          className="pointer-events-none absolute z-50 mix-blend-difference"
-          style={{
-            x: heartX,
-            y: heartY,
-            translateX: "-50%",
-            translateY: "-50%",
-            display: isHovering ? "block" : "none",
-          }}
-        >
-          <Heart className="w-8 h-8 fill-rose-500 text-rose-500 drop-shadow-[0_0_8px_rgba(244,63,94,0.6)]" />
-        </Motion.div>
       </div>
 
       {/* Footer */}

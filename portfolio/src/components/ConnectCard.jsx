@@ -9,7 +9,7 @@ export default function ConnectCard() {
       className="relative rounded-3xl border border-white/10 bg-zinc-950 p-6 overflow-hidden shadow-xl justify-center items-center flex flex-col"
     >
       {/* Glow background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity #contact" />
+      <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity " />
 
       {/* Header */}
       <div className="relative z-10">
@@ -56,7 +56,7 @@ function IconButton({ href, children }) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-zinc-900 text-zinc-300 hover:text-white hover:border-white/30 transition"
+      className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-zinc-900 text-zinc-300 transition hover:text-cyan-400 hover:drop-shadow-[0_0_8px_rgba(34,211,238,0.8)] hover:border-cyan-400/50"
     >
       {children}
     </a>

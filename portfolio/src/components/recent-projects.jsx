@@ -40,7 +40,7 @@ export function RecentProjects() {
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="relative flex gap-6 group cursor-pointer items-center"
+              className="project-card relative flex gap-6 group cursor-pointer items-center breathing-glow rounded-2xl p-4"
             >
               <div className="w-44 h-44 rounded-2xl overflow-hidden flex-shrink-0 bg-neutral-800 border border-neutral-700 shadow-md group-hover:border-orange-500 transition-colors">
                 <img

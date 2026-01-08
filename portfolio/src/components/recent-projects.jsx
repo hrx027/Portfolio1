@@ -1,23 +1,28 @@
 import { ArrowUpRight } from "lucide-react"
-
+import chatty from "../assets/chatty.png"
+import resume_matcher from "../assets/resume_matcher.png"
+import pdf_analyser from "../assets/pdfanalyser.png"
 const projects = [
   {
     id: 1,
     name: "Chatty App",
     description: "Full Stack Chatting Application",
-    image: "/saas-ai-dashboard-interface.jpg",
+    image: chatty,
+    link:"https://github.com/hrx027/chatty.git"
   },
   {
     id: 2,
-    name: "Resume-Analyser",
+    name: "Resume Matcher",
     description: "Analyzes resumes and according to the jd",
-    image: "/modern-web-design-template.jpg",
+    image: resume_matcher,
+    link: "https://hrx027resumematcher.streamlit.app",
   },
   {
     id: 3,
-    name: "Pdf-Analyser",
+    name: "Pdf Intelligent Analyser",
     description: "Help you to analyse the pdf and then answer the questions based on the pdf",
-    image: "/creative-web-design-portfolio.jpg",
+    image: pdf_analyser,
+    link: "https://hrx027pdfanalyser.streamlit.app",
   },
 ]
 
@@ -32,7 +37,9 @@ export function RecentProjects() {
           {projects.map((project) => (
             <a
               key={project.id}
-              href="#"
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
               className="relative flex gap-6 group cursor-pointer items-center"
             >
               <div className="w-44 h-44 rounded-2xl overflow-hidden flex-shrink-0 bg-neutral-800 border border-neutral-700 shadow-md group-hover:border-orange-500 transition-colors">
@@ -49,7 +56,7 @@ export function RecentProjects() {
                 </h3>
                 <p className="text-neutral-400 text-base">{project.description}</p>
               </div>
-              <ArrowUpRight
+              <ArrowUpRight 
                 className="absolute right-2 top-1/2 -translate-y-1/2 text-orange-500 opacity-0 group-hover:opacity-100 transition-opacity"
                 size={18}
               />

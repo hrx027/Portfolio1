@@ -1,7 +1,7 @@
 import { useState, useRef, useMemo } from "react"
 import { motion as Motion, useMotionValue, useSpring, useTransform } from "framer-motion"
 import { ClipboardList, Heart } from "lucide-react"
-
+import resume from "../assets/HrithikRaj_2K22_CO_216.pdf"
 export default function ResumeCard() {
   const [isHovering, setIsHovering] = useState(false)
   const containerRef = useRef(null)
@@ -54,7 +54,7 @@ export default function ResumeCard() {
           {chars}
         </div>
          <a
-  href="/resume.pdf"
+  href={resume}
   download
   className="block"
 >
@@ -85,7 +85,7 @@ export default function ResumeCard() {
         <div className="flex items-center gap-2 mb-3">
           <div className="p-2 rounded-lg bg-zinc-900 border border-white/10">
                    <a
-  href="/resume.pdf"
+  href={resume}
   download
   className="block"
 >

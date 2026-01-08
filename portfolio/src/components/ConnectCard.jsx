@@ -6,10 +6,10 @@ export default function ConnectCard() {
     <Motion.div
       whileHover={{ y: -4 }}
       transition={{ type: "spring", stiffness: 200, damping: 15 }}
-      className="relative rounded-3xl border border-white/10 bg-zinc-950 p-6 overflow-hidden shadow-xl"
+      className="relative rounded-3xl border border-white/10 bg-zinc-950 p-6 overflow-hidden shadow-xl justify-center items-center flex flex-col"
     >
       {/* Glow background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity" />
+      <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity #contact" />
 
       {/* Header */}
       <div className="relative z-10">
@@ -23,7 +23,7 @@ export default function ConnectCard() {
 
       {/* Primary CTA */}
       <a
-        href="mailto:aviralawasthi0208@gmail.com"
+        href="mailto:hrx027@gmail.com"
         className="relative z-10 flex items-center justify-center gap-2 w-full rounded-full bg-white text-black font-medium py-3 mb-6 hover:scale-[1.02] transition"
       >
         <Mail size={18} />
@@ -32,11 +32,11 @@ export default function ConnectCard() {
 
       {/* Social links */}
       <div className="relative z-10 flex items-center justify-center gap-4">
-        <IconButton href="https://github.com/AviralAwasthi0208">
+        <IconButton href="https://github.com/hrx027">
           <Github />
         </IconButton>
 
-        <IconButton href="https://linkedin.com/in/aviral-awasthi-416085263">
+        <IconButton href="https://linkedin.com/in/hrx027">
           <Linkedin />
         </IconButton>
 

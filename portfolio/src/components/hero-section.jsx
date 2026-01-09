@@ -50,7 +50,7 @@ export function HeroSection() {
             </p>
           </div>
 
-          <div className="bg-neutral-900/50 p-6 rounded-2xl border border-white/5 hover:scale-[1.02] transition-all duration-300 hover:shadow-[0_0_60px_rgba(0,136,255,0.25)]">
+          <div className="bg-neutral-900/50 p-6 rounded-2xl border border-white/5 hover:scale-[1.02] transition-all duration-300 hover:shadow-[0_0_60px_rgba(0,136,255,0.25)] breathing-glow">
             <div className="text-blue-500 mb-4">
               <Layers size={32} />
             </div>

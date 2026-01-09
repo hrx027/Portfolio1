@@ -8,7 +8,7 @@ const projects = [
     name: "Chatty App",
     description: "Full Stack Chatting Application",
     image: chatty,
-    link:"https://github.com/hrx027/chatty.git"
+    link:"https://chatty-alpha-seven.vercel.app/"
   },
   {
     id: 2,
